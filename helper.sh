@@ -101,7 +101,8 @@ build(){
 			fi
 			if [ -f "$d/droid.sh" ]; then
 				if [ "$USE_DROIDSH_SCRIPTS" = "y" ]; then
-					. "$d/rpm.sh" && echo "<<<Built $DROIDFOLDERNAME>>>" && rm -rf $DROIDFOLDERNAME #&& cd ..
+					. "$d/droid.sh" && echo "<<<Built $DROIDFOLDERNAME>>>" && rm -rf $DROIDFOLDERNAME #&& cd ..
+					cp "$COPY_PACKAGE" "$COPY_PACKAGE_UNALIGNED" "$WORKDIR"
 					cd $WORKDIR
 				fi
 			else
