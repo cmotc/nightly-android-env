@@ -9,7 +9,7 @@ if [ "$1" == "no-scripts" ]; then
 	USE_DROIDSH_SCRIPTS="N"
 fi
 
-WORKDIR=$(pwd)
+export WORKDIR=$(pwd)
 
 echo "Loading build helper scripts in $WORKDIR"
 
